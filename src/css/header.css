@@ -1,18 +1,15 @@
-.header{
-    width: 1800px !important;
+ .header{
+    max-width: 1800px;
     height: 50px !important;
-    background-color: #4550e954;
+    background-color: #93939754;
     box-shadow: 0px 0px 6px rgb(0, 0, 0);
     border-radius: 2vh;
+    margin-bottom: 20px;
     margin-left: 57px;
-    margin-top: 20px;
 }
 
 .button {
-    margin-top: 5px;
-    margin-left: 50px;
-    width: 300px;
-    height: 40px;
+    
     font-size: 16px;
     font-weight: bold;
     text-align: center;

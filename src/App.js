@@ -9,40 +9,10 @@ import { changeColor } from './components/lightControl';
 import { updateTemperature } from './components/updateTemperature';
 import useRandomNumber from './components/testRandomNumber';
 import 'bootstrap/dist/css/bootstrap.css';
-import LineChart from "./components/LineChart";
-import { UserData } from "./components/Data";
-
+import Chart from './components/chart';
 
 
 function App() {
-
-  const [userData, setUserData] = useState({
-    labels: UserData.map((data) => data.value),
-    datasets: [
-      {
-        label: "Temperature",
-        data: UserData.map((data) => data.Temperature),
-        backgroundColor: "red",
-        borderColor: "red",
-        borderWidth: 2,
-      },
-      {
-        label: "Moisture",
-        data: UserData.map((data) => data.Moisture),
-        backgroundColor: "blue",
-        borderColor: "blue",
-        borderWidth: 2,
-      },
-      {
-        label: "Lights",
-        data: UserData.map((data) => data.Lights),
-        backgroundColor: "green",
-        borderColor: "green",
-        borderWidth: 2,
-      },
-
-    ],
-  });
 
   const randomNumber = useRandomNumber();
  
@@ -64,7 +34,7 @@ function App() {
         </div>
         <div className="botton">
             <div className="botton-left">
-              <LineChart chartData={userData} />
+              <Chart/>
             </div>
             <div className="botton-right" >
               <div className="pic1" style={customPic1}>
