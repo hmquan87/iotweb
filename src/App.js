@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React  from 'react';
 import './css/App.css';
 import loff from './img/lightOff.png';
 import fan from './img/fan.png';

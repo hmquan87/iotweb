@@ -12,7 +12,7 @@ ReactDOM.render(
       <Header/>
       <Routes>  
         <Route path="/" element={<App/>}/>
-        <Route path="click" element={<Click/>} />
+        <Route path="/click" element={<Click/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

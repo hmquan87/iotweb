@@ -1,7 +1,7 @@
 function temperature() {
     const thermometerElement = document.getElementById('thermometer');
-    const temperatureText = document.getElementById('text1').textContent;
-  
+    const temperatureText = document.getElementById('text1');
+
     const temperature = parseInt(temperatureText, 10);
   
     if (Number.isNaN(temperature)) {

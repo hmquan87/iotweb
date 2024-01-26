@@ -10,10 +10,18 @@ function Header() {
             <button className="button" type="button">DashBoard</button>
             <button className="button" type="button">DashBoard</button> */}
             <nav>
-                <Link to='/' className="button" style={{marginLeft:'225px'}}>Dashboard</Link>
-                <Link to='/click' className="button">Dashboard</Link>
-                <Link to='/' className="button">Dashboard</Link>
-                <Link to='/' className="button" >Dashboard</Link>
+            <Link to="/">
+                <button className="button" type="button" style={{ marginLeft: '355px' }}>DashBoard 1</button>
+            </Link>
+            <Link to="/click">
+                <button className="button" type="button">DashBoard 2</button>
+            </Link>
+            <Link to="/test">
+                <button className="button" type="button">DashBoard 3</button>
+            </Link>
+            <Link to="/test1">
+                <button className="button" type="button">DashBoard 4</button>
+            </Link>
             </nav>
             <Outlet/>
         </div>
