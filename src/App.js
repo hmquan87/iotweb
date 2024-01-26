@@ -87,7 +87,7 @@ const customPic2 ={
 };
 
 const customColor1 = {
-  background: 'linear-gradient(to bottom, #D45769, #E69D45)',
+  background: 'linear-gradient(to bottom, #FD5A68, #FC8884)',
   marginLeft: '25px', 
 };
 const customColor2 = {
@@ -95,7 +95,7 @@ const customColor2 = {
   marginLeft: '50px',
 };
 const customColor3 = {
-  background: 'linear-gradient(to bottom, #FFDD94, #FA897B)',
+  background: 'linear-gradient(to bottom, #E5A663, #FAEE9E)',
   marginLeft: '50px',
 };
 

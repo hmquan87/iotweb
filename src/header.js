@@ -11,7 +11,7 @@ function Header() {
             <button className="button" type="button">DashBoard</button> */}
             <nav>
             <Link to="/">
-                <button className="button" type="button" style={{ marginLeft: '355px' }}>DashBoard 1</button>
+                <button className="button" type="button" style={{ marginLeft: '405px' }}>DashBoard 1</button>
             </Link>
             <Link to="/click">
                 <button className="button" type="button">DashBoard 2</button>

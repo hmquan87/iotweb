@@ -40,60 +40,62 @@
 //// part2
 
 
-// const getRandomValue = (min, max) => {
-//   return Math.floor(Math.random() * (max - min + 1) + min);
-// };
-
-// const generateRandomUserData = () => {
-//   const userData = [];
-
-//   for (let id = 1; id <= 15; id++) {
-//     const randomTemperature = getRandomValue(1, 10);
-//     const randomMoisture = getRandomValue(1, 10);
-//     const randomLights = getRandomValue(1, 10);
-
-//     userData.push({
-//       id,
-//       temperature: randomTemperature,
-//       moisture: randomMoisture,
-//       lights: randomLights,
-//     });
-//   }
-
-//   return userData;
-// };
-
-// export const UserData = generateRandomUserData();
-
-
-const fetchDataFromDatabase = async () => {
-  try {
-    const response = await fetch('your-api-endpoint'); // Replace with your actual API endpoint
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Error fetching data from the database:', error);
-    return [];
-  }
+const getRandomValue = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-const generateUserDataFromDatabase = async () => {
-  const dataFromDatabase = await fetchDataFromDatabase();
+const generateRandomUserData = () => {
+  const userData = [];
 
-  if (dataFromDatabase.length === 0) {
-    console.error('No data fetched from the database.');
-    return [];
+  for (let id = 1; id <= 15; id++) {
+    const randomTemperature = getRandomValue(1, 10);
+    const randomMoisture = getRandomValue(1, 10);
+    const randomLights = getRandomValue(1, 10);
+
+    userData.push({
+      id,
+      temperature: randomTemperature,
+      moisture: randomMoisture,
+      lights: randomLights,
+    });
   }
-
-  const userData = dataFromDatabase.map((item, index) => ({
-    id: index + 1,
-    temperature: item.temperature,
-    moisture: item.moisture,
-    lights: item.lights,
-  }));
 
   return userData;
 };
 
-export const UserData = await generateUserDataFromDatabase();
+export const UserData = generateRandomUserData();
+
+
+/// part3
+
+// const fetchDataFromDatabase = async () => {
+//   try {
+//     const response = await fetch('your-api-endpoint'); // Replace with your actual API endpoint
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.error('Error fetching data from the database:', error);
+//     return [];
+//   }
+// };
+
+// const generateUserDataFromDatabase = async () => {
+//   const dataFromDatabase = await fetchDataFromDatabase();
+
+//   if (dataFromDatabase.length === 0) {
+//     console.error('No data fetched from the database.');
+//     return [];
+//   }
+
+//   const userData = dataFromDatabase.map((item, index) => ({
+//     id: index + 1,
+//     temperature: item.temperature,
+//     moisture: item.moisture,
+//     lights: item.lights,
+//   }));
+
+//   return userData;
+// };
+
+// export const UserData = await generateUserDataFromDatabase();
 
