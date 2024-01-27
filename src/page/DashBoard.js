@@ -24,11 +24,11 @@ function DashBoard() {
                 <WiThermometer className="col-6" id="thermometer" style={customSizeImgIcons} onLoadCapture={updateTemperature}/>
             </div>
             <div className="pic" style={customColor2}>
-              <p className="col-6 mt-3 my-4">{randomNumber} %</p>
+              <p id="text1" className="col-6 mt-3 my-4"> %</p>
               <WiHumidity id="humidity" style={customSizeImgIcons2}/>
             </div>
             <div className="pic" style={customColor3}>
-              <p className="col-6 mt-3 my-4">{randomNumber} cd</p>
+              <p id="text1" className="col-6 mt-3 my-4"> cd</p>
               <IoSparklesOutline id="sparkles" style={customSizeImgIcons1}/>
             </div>
         </div>
