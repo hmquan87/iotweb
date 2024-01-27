@@ -11,10 +11,10 @@ function Header() {
             <button className="button" type="button">DashBoard</button> */}
             <nav>
             <Link to="/">
-                <button className="button" type="button" style={{ marginLeft: '405px' }}>DashBoard 1</button>
+                <button className="button" type="button" style={{ marginLeft: '405px' }}>DashBoard</button>
             </Link>
             <Link to="/click">
-                <button className="button" type="button">DashBoard 2</button>
+                <button className="button" type="button">Click History</button>
             </Link>
             <Link to="/test">
                 <button className="button" type="button">DashBoard 3</button>
