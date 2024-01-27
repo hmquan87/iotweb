@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import Dashboard from "./page/DashBoard";
 import reportWebVitals from "./reportWebVitals";
-import Header from './header';
-import Click from './click';
+import Header from './page/header';
+import Click from './page/click';
+import Page3 from "./page/page3";
+import Profile from "./page/profile";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 ReactDOM.render(
@@ -11,8 +13,10 @@ ReactDOM.render(
     <BrowserRouter>
       <Header/>
       <Routes>  
-        <Route path="/" element={<App/>}/>
+        <Route path="/" element={<Dashboard/>}/>
         <Route path="/click" element={<Click/>} />
+        <Route path="/page3" element={<Page3/>} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

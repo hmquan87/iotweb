@@ -1,18 +1,18 @@
 import React  from 'react';
-import './css/App.css';
-import loff from './img/lightOff.png';
-import fan from './img/fan.png';
+import '../css/dashboard.css';
+import loff from '../img/lightOff.png';
+import fan from '../img/fan.png';
 import { WiThermometer, WiHumidity } from "react-icons/wi";
 import { IoSparklesOutline } from "react-icons/io5";
-import { toggleRotation } from './components/fanControl';
-import { changeColor } from './components/lightControl';
-import { updateTemperature } from './components/updateTemperature';
-import useRandomNumber from './components/testRandomNumber';
+import { toggleRotation } from '../components/fanControl';
+import { changeColor } from '../components/lightControl';
+import { updateTemperature } from '../components/updateTemperature';
+import useRandomNumber from '../components/testRandomNumber';
 import 'bootstrap/dist/css/bootstrap.css';
-import Chart from './components/chart';
+import Chart from '../components/chart';
 
 
-function App() {
+function DashBoard() {
 
   const randomNumber = useRandomNumber();
  
@@ -99,5 +99,5 @@ const customColor3 = {
   marginLeft: '50px',
 };
 
-export default App;
+export default DashBoard;
 

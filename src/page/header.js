@@ -1,4 +1,4 @@
-import './css/header.css';
+import '../css/header.css';
 import { Link, Outlet } from 'react-router-dom';
 import React from 'react';
 
@@ -16,11 +16,11 @@ function Header() {
             <Link to="/click">
                 <button className="button" type="button">Click History</button>
             </Link>
-            <Link to="/test">
-                <button className="button" type="button">DashBoard 3</button>
+            <Link to="/page3">
+                <button className="button" type="button">Page 3</button>
             </Link>
-            <Link to="/test1">
-                <button className="button" type="button">DashBoard 4</button>
+            <Link to="/profile">
+                <button className="button" type="button">Profile</button>
             </Link>
             </nav>
             <Outlet/>
