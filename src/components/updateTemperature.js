@@ -11,6 +11,8 @@ function temperature() {
   // Use nullish coalescing operator to provide a default value of '0'
   const temperatureText = temperatureTextElement?.textContent?.trim() ?? '0';
 
+  // const temperature = parseInt(temperatureText, 10);
+
   const temperature = parseInt(temperatureText, 10);
 
   if (Number.isNaN(temperature)) {
@@ -18,8 +20,17 @@ function temperature() {
     return; // Exit the function if temperature is not a number
   }
 
+  if (Number.isNaN(temperature)) {
+    console.error("Invalid temperature value:", temperatureText);
+    return; // Exit the function if temperature is not a number
+  }
+
   const color = getTemperatureColor(temperature);
-  thermometerElement.style.color = color;
+  // thermometerElement.style.color = color;
+  if (thermometerElement) {
+    thermometerElement.style.color = color;
+  }
+  
 
   console.log(
     `Temperature updated: ${temperature}°C, color set to ${color}`
