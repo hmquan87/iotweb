@@ -4,15 +4,24 @@ const Click = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const fetchData = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/clicks');
+      const newData = await response.json();
+      setData(newData);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
-    fetch('http://localhost:3001/clicks')
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        setData(data);
-      })
-      .catch(err => console.log(err))
-      .finally(() => setLoading(false));
+    fetchData();
+    const intervalId = setInterval(() => {
+      fetchData();
+    }, 100);
+    return () => clearInterval(intervalId);
   }, []);
 
   if (loading) {
@@ -22,16 +31,16 @@ const Click = () => {
   return (
     <div>
       <h1>Data Display</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Light</th>
-              <th>Fan</th>
-              <th>Time</th>
-            </tr>
-          </thead>
-          <tbody>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Light</th>
+            <th>Fan</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
           {data && data.length > 0 ? (
             data.map((d, i) => (
               <tr key={i}>
@@ -46,8 +55,8 @@ const Click = () => {
               <td>No data available</td>
             </tr>
           )}
-</tbody>
-        </table>
+        </tbody>
+      </table>
     </div>
   );
 };
