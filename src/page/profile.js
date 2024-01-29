@@ -38,12 +38,6 @@ const Profile = () => {
         email: 'quanhm.872002@gmail.com',
         cardid: 'B20DCPT159',
       });
-    const handleClick = (event) => {
-      if (!event.target.href || event.target.href === '#') {
-        event.preventDefault();
-        alert('Link is empty. Returning 404 error.');
-      }
-    };
     return (
       <div className="profile">
           <img id="avt" src={profile} alt="" />
