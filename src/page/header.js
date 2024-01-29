@@ -13,11 +13,11 @@ function Header() {
             <Link to="/">
                 <button className="button" type="button" style={{ marginLeft: '405px' }}>DashBoard</button>
             </Link>
-            <Link to="/click">
-                <button className="button" type="button">Click History</button>
+            <Link to="/datasensor">
+                <button className="button" type="button">Data Sensor</button>
             </Link>
-            <Link to="/page3">
-                <button className="button" type="button">Page 3</button>
+            <Link to="/history">
+                <button className="button" type="button">History</button>
             </Link>
             <Link to="/profile">
                 <button className="button" type="button">Profile</button>

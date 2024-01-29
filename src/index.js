@@ -14,8 +14,8 @@ ReactDOM.render(
       <Header/>
       <Routes>  
         <Route path="/" element={<Dashboard/>}/>
-        <Route path="/click" element={<Click/>} />
-        <Route path="/page3" element={<Page3/>} />
+        <Route path="/history" element={<Click/>} />
+        <Route path="/datasensor" element={<Page3/>} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
