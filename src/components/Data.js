@@ -47,7 +47,7 @@ const getRandomValue = (min, max) => {
 const generateRandomUserData = () => {
   const userData = [];
 
-  for (let id = 1; id <= 15; id++) {
+  for (let id = 1; id <= 6; id++) {
     const randomTemperature = getRandomValue(1, 10);
     const randomMoisture = getRandomValue(1, 10);
     const randomLights = getRandomValue(1, 10);

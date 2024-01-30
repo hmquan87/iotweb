@@ -87,7 +87,7 @@ const Chart = () => {
 
         return updatedData;
       });
-    }, 5000);
+    }, 20000);
 
     return () => clearInterval(intervalId);
   }, []);

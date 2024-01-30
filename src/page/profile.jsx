@@ -7,49 +7,19 @@ import '../css/profile.css'
 
 const Profile = () => {
 
-    // return (
-    //     <div className="profile">
-    //         <div className="left">
-    //             <img src={profile} alt="" />
-    //             <table class="horizontal-table">
-    //                 <thead>
-    //                     <tr>
-    //                         <th>ID</th>
-    //                         <th>Name</th>
-    //                         <th>Email</th>
-    //                     </tr>
-    //                 </thead>
-    //                 <tbody>
-    //                     <tr>
-    //                         <td>1</td>
-    //                         <td>John Doe</td>
-    //                         <td>john@example.com</td>
-                            
-    //                     </tr>
-                        
-    //                 </tbody>
-    //             </table>
-    //         </div>
-    //     </div>
-    // )
     const [user, setUser] = useState({
         name: 'Hoàng Minh Quân',
-        age: 25,
+        date: '08-07-2002',
         email: 'quanhm.872002@gmail.com',
         cardid: 'B20DCPT159',
       });
-    const handleClick = (event) => {
-      if (!event.target.href || event.target.href === '#') {
-        event.preventDefault();
-        alert('Link is empty. Returning 404 error.');
-      }
-    };
+    
     return (
       <div className="profile">
           <img id="avt" src={profile} alt="" />
           <div className="body">
               <h1 style={{textAlign:'center', marginLeft:'-30vh', fontSize:'5vh'}}>{user.name}</h1>
-              <p><strong>Age:</strong> {user.age}</p>
+              <p><strong>Date:</strong> {user.date}</p>
               <p><strong>Email:</strong> {user.email}</p>
               <p><strong>CardID:</strong> {user.cardid}</p>
           </div>

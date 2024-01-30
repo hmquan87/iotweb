@@ -14,7 +14,7 @@ const useRandomNumber = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       generateRandomNumber();
-    }, 3000);
+    }, 20000);
 
     // Clear the interval when the component is unmounted
     return () => clearInterval(intervalId);

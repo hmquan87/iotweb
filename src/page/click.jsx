@@ -29,8 +29,9 @@ const Click = () => {
   }
 
   return (
+    
     <div>
-      <h1>Data Display</h1>
+      <h1>Data Click</h1>
       <table>
         <thead>
           <tr>

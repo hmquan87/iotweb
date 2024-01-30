@@ -120,12 +120,12 @@
 }
 
 .switch-toggle:checked{
-  background: #fbff00;
+  background: #09ff00;
 }
 
 .switch-toggle:checked:before{
   margin-left: 43px !important;
-  background: #fbff00;
+  background: #09ff00;
 }
 
 #imgLigt {
